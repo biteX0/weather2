@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:weather2/models/constants.dart';
-import 'package:weather2/service.dart';
 
-class GetStarted extends StatelessWidget {
+import 'home_page.dart';
+
+class GetStarted extends StatefulWidget {
    GetStarted({super.key});
-  final _dataService = DataService();
-  final _cityTextController = TextEditingController();
 
+  @override
+  State<GetStarted> createState() => _GetStartedState();
+
+
+class _GetStartedState extends State<GetStarted> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,13 +27,15 @@ class GetStarted extends StatelessWidget {
                 child: SizedBox(
                   width: 200,
                   child: TextField(
-                    // controller: _cityTextController,
                     decoration: InputDecoration(labelText: 'City'),
                     textAlign: TextAlign.center,
                   ),
                 )),
             ElevatedButton(
-              onPressed: _searchCity,
+              onPressed: () {
+                Navigator.pushReplacement(context, 
+                MaterialPageRoute(builder: (context) => const HomePage()));
+              },
               style: ElevatedButton.styleFrom(
                   minimumSize: const Size(200, 40),
                   maximumSize: const Size.fromHeight(40),
@@ -49,8 +55,5 @@ class GetStarted extends StatelessWidget {
       ),
     );
   }
-
-  void _searchCity() {
-    _dataService.getWeather(_cityTextController.text);
   }
-}
+  }
