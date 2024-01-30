@@ -42,7 +42,7 @@ class _GetStartedState extends State<GetStarted> {
                   backgroundColor: secondColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30))),
-              child: const Text('Get Started',
+              child: const Text('Weather',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
