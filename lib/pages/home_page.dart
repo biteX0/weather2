@@ -29,7 +29,10 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: [const BackgroundApp(), _buildUi()],
+        children: [
+          const BackgroundApp(), 
+          _buildUi()
+          ],
       ),
     );
   }
