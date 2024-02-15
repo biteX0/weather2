@@ -5,7 +5,7 @@ import 'package:weather2/models/constants.dart';
 import 'package:weather2/models/theme_background.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key, BuildContext? builder});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => HomePageState();

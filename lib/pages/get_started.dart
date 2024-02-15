@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:weather2/models/constants.dart';
-import 'package:weather2/models/theme_background.dart';
 
 import 'home_page.dart';
 
